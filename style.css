@@ -103,8 +103,7 @@ body {
 }
 
 #dice {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  scale: 0.6;
 }
 
 #toggle {

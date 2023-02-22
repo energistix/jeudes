@@ -34,7 +34,7 @@ function restart() {
 }
 
 async function IAPlay(rolls) {
-  await waitFor(1000)
+  await waitFor(400)
   if (!rolls) {
     rolls = Math.floor(Math.random() * 10)
   } else if (rolls === 0) {
@@ -49,7 +49,6 @@ async function IAPlay(rolls) {
   currentScore += roll
   document.querySelector(`#player${currentPlayer} .current-score div`).textContent = currentScore
   if (currentScore < 20) {
-    await waitFor(1000)
     await IAPlay()
   } else {
     switchPlayer()
