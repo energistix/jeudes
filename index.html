@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="player1" class="player">
+        <div class="name">PLAYER 1 <img src="./assets/dot.svg" class="turn-indicator filter" /></div>
+        <div class="score">0</div>
+        <div class="current-score">
+          CURRENT
+          <div>0</div>
+        </div>
+      </div>
+      <div id="middle">
+        <div class="button" id="new-game"><img class="filter" src="./assets/plus.svg" />NEW GAME</div>
+        <img id="dice" src="./assets/diceImages/1.svg" />
+        <div class="button" id="roll"><img class="filter" src="./assets/roll.svg" />ROLL DICE</div>
+        <div class="button" id="hold"><img class="filter" src="./assets/hold.svg" />HOLD</div>
+      </div>
+      <div id="player2" class="player">
+        <!-- add a toggle with a text label -->
+        <div id="toggle">
+          <input type="checkbox" />
+          <label>IS AI</label>
+        </div>
+        <div class="name">
+          PLAYER 2 <img src="./assets/dot.svg" class="turn-indicator filter" style="visibility: hidden;" />
+        </div>
+        <div class="score">0</div>
+        <div class="current-score">
+          CURRENT
+          <div>0</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+/* make a constant "indent-color" */
+
+:root {
+  --indent-color: #eb4d4c;
+}
+
+/* the body includes 3 divs that should be ligns */
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  /* center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  user-select: none;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  /* create border of #ab8659 */
+  border: 15px solid #ab8659;
+  padding: 50px;
+  /* make the background two different colors with a sharp line separating them*/
+  background: linear-gradient(to right, #f7f7f7, #f7f7f7 50%, #fff 50%, #fff);
+}
+
+.score {
+  color: var(--indent-color);
+  font-size: 55px;
+  padding-top: 15px;
+  padding-bottom: 150px;
+  /* the text is too thick how do i fix that ?*/
+  font-weight: lighter;
+}
+
+.current-score {
+  background-color: var(--indent-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.current-score div {
+  color: white;
+  font-size: 45px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.turn-indicator {
+  color: var(--indent-color);
+  max-height: 50px;
+  min-width: 50px;
+}
+
+.filter {
+  filter: invert(58%) sepia(88%) saturate(5522%) hue-rotate(337deg) brightness(105%) contrast(86%);
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  /* center verticaly */
+  align-items: center;
+  /* prevent lien breaks */
+  white-space: nowrap;
+}
+
+#middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  cursor: pointer;
+}
+
+/* animate buttons to get bigger smoothly when hovered */
+.button:not(.disabled):hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+/* animare buttons when clicked */
+.button:not(.disabled):active {
+  transform: scale(1);
+  transition: transform 0.2s;
+}
+
+#dice {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#toggle {
+  position: absolute;
+  transform: translateY(-100%) translateX(-10%);
+}
+
+#toggle input {
+  transform: scale(3) translateY(-20%);
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
